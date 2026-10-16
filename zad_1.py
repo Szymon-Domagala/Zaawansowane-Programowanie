@@ -1,8 +1,5 @@
-def print_names(names : list = []):
-    if len(names) > 5:
-        print("Lista jest za długa")
-    else:
-        for name in names:
-            print(name)
+def greetings(name : str = "imie", surname : str = "nazwisko") -> str:
+    return f"Cześć {name} {surname}!"
 
-print_names(["x","z","c","a","l"])
+response = greetings("Szymon", "Domagała")
+print(response)

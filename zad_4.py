@@ -1,10 +1,4 @@
-def show_second(numbers : list = []):
-    if len(numbers) > 10:
-        print("Lista jest za długa")
-    else:
-        for i in range (10):
-            if i % 2 == 1:
-                print(numbers[i])
+def check_sum(num1: int = 1, num2: int = 1, num3: int = 1) -> bool:
+    return (num1 + num2) >= num3
 
-test = [1,2,3,4,5,6,7,8,9,10]
-show_second(test)
+print(check_sum(2,3,5))
