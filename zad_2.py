@@ -1,4 +1,4 @@
-def update_list_v1(numbers : list = []):
+def update_list_v1(numbers: list = []):
     if len(numbers) > 5:
         print("Lista jest za długa")
     else:
@@ -6,14 +6,17 @@ def update_list_v1(numbers : list = []):
         for number in numbers:
             new_list.append(number * 2)
         return new_list
-def update_list_v2(numbers : list = []):
+
+
+def update_list_v2(numbers: list = []):
     if len(numbers) > 5:
         print("Lista jest za długa")
     else:
         new_list = [number * 2 for number in numbers]
         return new_list
 
-test = [1,2,3,4,5]
+
+test = [1, 2, 3, 4, 5]
 print("Baza")
 for number in test:
     print(number)
