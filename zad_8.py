@@ -1,10 +1,27 @@
 import requests
 import argparse
 
+
 class Brewery:
-    def __init__(self, id: str, name: str, brewery_type: str, address_1: str | None, address_2: str | None, 
-    address_3: str | None, city: str, state_province: str, postal_code: str, country: str, longitude: float | None,
-    latitude: float | None, phone: str | None, website_url: str | None, state: str, street: str | None):
+    def __init__(
+        self,
+        id: str,
+        name: str,
+        brewery_type: str,
+        address_1: str | None,
+        address_2: str | None,
+        address_3: str | None,
+        city: str,
+        state_province: str,
+        postal_code: str,
+        country: str,
+        longitude: float | None,
+        latitude: float | None,
+        phone: str | None,
+        website_url: str | None,
+        state: str,
+        street: str | None,
+    ):
         self.id = id
         self.name = name
         self.brewery_type = brewery_type
@@ -21,6 +38,7 @@ class Brewery:
         self.website_url = website_url
         self.state = state
         self.street = street
+
     def __str__(self):
         return (
             f"ID: {self.id}"
@@ -39,11 +57,11 @@ class Brewery:
             f"\nWebsite URL: {self.website_url}"
             f"\nState: {self.state}"
             f"\nStreet: {self.street}"
-            )
+        )
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--city",type=str, help="Miasto z którego pochodzi piwo")
+parser.add_argument("--city", type=str, help="Miasto z którego pochodzi piwo")
 args = parser.parse_args()
 
 url = f"https://api.openbrewerydb.org/v1/breweries"
@@ -61,7 +79,9 @@ try:
 
     index = 1
     for beer in brewery_list:
-        print(f"=================================== {index} ===================================")
+        print(
+            f"=================================== {index} ==================================="
+        )
         print(beer)
         index += 1
 except requests.exceptions.RequestException as e:
