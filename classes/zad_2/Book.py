@@ -1,4 +1,4 @@
-from classes.zad_2 import Library
+from classes.zad_2.library import Library
 
 
 class Book:

@@ -1,4 +1,4 @@
-from classes.zad_1 import Student
+from classes.zad_1.student import Student
 from classes.zad_2 import (
     Book,
     Employee,

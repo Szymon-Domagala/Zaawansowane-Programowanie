@@ -1,5 +1,6 @@
-from classes.zad_1 import Student
-from classes.zad_2 import Employee
+from classes.zad_1.student import Student
+from classes.zad_2.employee import Employee
+from classes.zad_2.book import Book
 from typing import List
 
 
